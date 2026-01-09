@@ -1,0 +1,7 @@
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="EiSbTr5gAjGrRXm3UN8C")
+project = rf.workspace("object-detection-oitsh").project("lemon-harvesting-bpkrb")
+version = project.version(3)
+dataset = version.download("yolov11")
